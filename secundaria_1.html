@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Preparativos</title>
+
+    <!-- Codigo necesario para fuentes de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Kdam+Thmor+Pro&family=Kode+Mono:wght@400..700&family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Workbench&display=swap" rel="stylesheet">
+
+    <!-- Codigo necesario para el favicon -->
+    <link rel="icon" href="recursos/imagenes/icono_pag.ico" type="image/x-icon">
+
+    <!-- Enlace CSS-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Enlace JS-->
+    <link rel="stylesheet" href="script.js">
+</head>
+<body id="fondo_pag_sec">
+    <div class="all_sec">
+        <h1>Descargas e Instalación</h1>
+
+        <p>
+            Para comenzar, debemos descargarnos varias cosas. Los siguientes pasos se pueden realizar entre dos sistemas operativos físicos o nativos, es decir, entre dos que estén instalados en un equipo; sin embargo, se mostrarán realizados en un software de virtualización.
+        </p>
+
+        <p>
+            Comenzaremos por la parte fácil, instalar un software de virtualización. El que vamos a utilizar será VirtualBox, el cual dejaré el enlace justo aquí para ahorrarles tiempo.
+        </p>
+
+        <p>
+            Será tan fácil como que, una vez que se ingrese a la página, nos dirijamos a la siguiente opción:
+        </p>
+        <img src="./recursos/imagenes/cap1.png" alt="imagen">
+
+        <p>
+            Y elegimos la opción correspondiente a nuestro S.O.
+        </p>
+        <img src="./recursos/imagenes/cap2.png" alt="imagen">
+
+        <p>
+            Para su instalación, simplemente vamos clicando en ‘next’ (siguiente) hasta que terminemos de instalarlo, dándole a ‘finish’ (finalizar).
+        </p>
+
+        <p>
+            Lo siguiente y último que necesitamos descargar son las correspondientes ISOs que vamos a usar. En este caso, descargaremos una ISO de Ubuntu y otra de Windows, las cuales puedes encontrar en sus respectivas páginas oficiales, pero que os dejamos <a href="https://mega.nz/folder/Ef1AXbpS#Haf7hQtqbSfXfyN082pQ8w/folder/tL8z2bwJ"><span class="resalto">aquí</span></a>
+            porque es más fácil :), están en .rar, simplemente descomprímelas y ya estarían.
+        </p>
+
+        <p>
+            Pss, también está la de Debian 👍.
+        </p>
+
+        <h2>Creación de las Máquinas Virtuales</h2>
+
+        <p>
+            Para crear dichas máquinas se haría de la misma manera, así que solo habrá una explicación.
+        </p>
+
+        <p>
+            Abrimos VirtualBox y nos dirigimos a la opción llamada ’Nueva’.
+        </p>
+        <img src="./recursos/imagenes/cap3.png" alt="imagen">
+
+        <p>
+            Una vez habiéndole dado, se abrirá el siguiente submenú:
+        </p>
+        <img src="./recursos/imagenes/cap4.png" alt="imagen">
+
+        <p>
+            Las opciones que nos interesan son:
+        </p>
+
+        <ul>
+            <li><strong>Nombre:</strong> Nombre de la máquina</li>
+            <li><strong>Imagen ISO:</strong> Pondremos la ISO que hemos descargado</li>
+        </ul>
+
+        <p>
+            En esta pestaña pondremos una clave de producto genérica que podemos encontrar en internet, junto con un nuevo usuario con su respectiva contraseña en los apartados ‘Nombre de usuario’ y ‘contraseña’.
+        </p>
+        <img src="./recursos/imagenes/cap5.png" alt="imagen">
+
+        <p>
+            Aquí se escogen los parámetros de memoria RAM que utilizará la máquina junto con la cantidad de CPU que usará.
+        </p>
+        <img src="./recursos/imagenes/cap6.png" alt="imagen">
+
+        <p>
+            Para finalizar, se elegirá el tamaño de disco que deseemos.
+            <strong>Nota:</strong> Si ponemos reservar tamaño completo, se creará una partición de disco que servirá solo para la máquina, no recomiendo esta opción.
+        </p>
+        <img src="./recursos/imagenes/cap7.png" alt="imagen">
+
+        <p>
+            Y así se haría la configuración de las máquinas virtuales.
+        </p>
+    </div>
+</body>
+</html>

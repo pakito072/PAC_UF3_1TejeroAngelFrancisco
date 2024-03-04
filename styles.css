@@ -1,0 +1,326 @@
+/*Página principal/recursos universales*/
+
+#fondo_pag_prin {
+    /*Fondo de la página*/
+    background-image: url(./recursos/imagenes/fondo_pag.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.all_prin {
+    /*Fondo del cuadro*/
+    background-color: rgba(0, 0, 0, 0.65); /*rgba = RED/GREEN/BLUE/ALPHA (el alpha es la transparencia, gracias a esto evitamos que al texto se le aplique transparencia)*/
+    padding: 8px;
+    margin: 25px;
+    border-radius: 10px;
+
+    /*Tipo de letra principal*/
+    font-family: monospace;
+    font-size: xx-large;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: white;
+
+    /*Animacion*/
+    animation: aparecerConRebote 1s ease-in-out;
+}
+
+/*Recursos de animaciones y javascript*/
+.maquina_escribir{
+    display: block;
+    white-space: nowrap; /* los espacios en blanco no rompen la línea */  
+    width:121ch; /* el ancho será el número de caracteres que tiene nuestra línea */
+    border-right: 4px solid;
+    animation: escribiendo 5s steps(121) , parpadeo-cursor .75s infinite step-end alternate;          
+    overflow: hidden;
+  }
+ 
+  @keyframes escribiendo {
+    from { width: 0; }
+  }
+
+  @keyframes parpadeo-cursor {
+    50% { border-color: transparent;}
+  }
+
+  @keyframes aparecerConRebote {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resalto {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "MORF" 15,
+    "SHLN" 50;
+}
+
+/* Menú y estilos generales de las Cards */
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 50px;
+}
+
+.opcion {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+.card {
+    display:none;
+    position: absolute;
+    top: 0;
+    left:500px; /* Ajusta la distancia de la tarjeta con respecto a la opción */
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 4px 4px 8px inset linear-gradient(to bottom right, yellow, magenta); /* Gradiente de amarillo a magenta */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mostrar la tarjeta al pasar el cursor sobre la opción */
+.opcion:hover .card {
+    display: block;
+}
+
+/*Página secundaria: Preparativos*/
+#fondo_pag_sec {
+    /*Fondo de la página*/
+    background-image: url(./recursos/imagenes/fondosec1_pag.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.all_sec {
+    /*Fondo del cuadro*/
+    background-color: rgba(0, 0, 0, 0.65);
+    /*rgba = RED/GREEN/BLUE/ALPHA (el alpha es la transparencia, gracias a esto evitamos que al texto se le aplique transparencia)*/
+    padding: 8px;
+    margin: 25px;
+    border-radius: 10px;
+
+    /*Tipo de letra principal*/
+    font-family: monospace;
+    font-size: xx-large;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: white;
+
+    /*Animacion*/
+    animation: aparecerConRebote 1s ease-in-out;
+}
+
+@keyframes escribiendo {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes parpadeo-cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes aparecerConRebote {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*Pagina secundaria: Video*/
+.all_video {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: url('./recursos/imagenes/marco_video.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contenedor_video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    border-radius: 15px; /* Puedes ajustar el valor según tus preferencias */
+
+}
+
+.boton {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #0077cc; /* Color azul para el texto */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+.boton:hover {
+    background-color: #ff3385; /* Color rosa más oscuro al pasar el mouse */
+}
+
+/*Footer*/
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  /*Fondo del cuadro*/
+  background-color: rgba(0, 0, 0, 0.65); /*rgba = RED/GREEN/BLUE/ALPHA (el alpha es la transparencia, gracias a esto evitamos que al texto se le aplique transparencia)*/
+  padding: 8px;
+  margin: 25px;
+  border-radius: 10px;
+
+  /*Tipo de letra principal*/
+  font-family: monospace;
+  font-size: xx-large;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: white;
+
+  /*Animacion*/
+  animation: aparecerConRebote 1s ease-in-out;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
